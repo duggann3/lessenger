@@ -1,0 +1,12 @@
+{
+    "name": "datastax-connector-chat_food-table",
+    "config": {
+      "connector.class": "com.datastax.oss.kafka.sink.CassandraSinkConnector",
+      "tasks.max": "10",
+      "topics": "chat_food",
+      "contactPoints": "cassandra",
+      "loadBalancing.localDc": "datacenter1",
+      "topic.chat_food.kafka_examples.chats.mapping": "sender=value.sender, message=value.message, date_time=value.datetime, channel=value.channel",
+      "topic.chat_food.kafka_examples.chats.consistencyLevel": "LOCAL_QUORUM"
+    }
+  }
